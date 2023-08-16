@@ -1,101 +1,201 @@
 import SwiftUI
 
 struct TipScreen: View {
-    var totalWithTip = Double()      // <total with tip>
-    var totalWithoutTip = Double(90)     // <total without tip>
-  //  var fifteenPercentAmt = totalWithoutTip * 1.15
-  //  var eighteenPercentAmt = totalWithoutTip * 1.18
-  //  var twentyPercentAmt = totalWithoutTip * 1.2
-  //  var tenPercentAmt = totalWithoutTip * 1.1
-  //  var tenPercentAmt = ceil((totalWithoutTip * 1.1)*100)/100
+
+    @Binding var total: Double
+    @Binding var tax: Double
+    
+    @State var totalWithTip = Double()      // <total with tip>
+    @State var customPercentnum = ""
+    @State var customExtraAmt = Double()
+ 
+
     
     var body: some View {
-        VStack{                                             //really big vstack
-            HStack{                                   //tip + icon hstack
-                Text("Tip")
-                    .font(.largeTitle)
-                    .fontWeight(.black)
-                Image("tipicon")
-                    .resizable(resizingMode: .stretch)
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 100.0)
-            }
-            VStack(alignment: .trailing){           //total w tip + total wo tip hstack
-                Text("Total with tip: $\(totalWithTip)")
-                    .font(.title)
-
-                Text("Total without tip: $\(totalWithoutTip)")
-                    .font(.title)
+        
+        var totalWithoutTip = total + tax    // <total without tip>
+        
+        NavigationStack{
+            VStack{                                             //really big vstack
+                HStack{                                   //tip + icon hstack
+                    Text("Tip")
+                        .font(.largeTitle)
+                        .fontWeight(.black)
+                    Image("tipicon")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100.0)
                 }
-            VStack{                                 //vstack with 2 rows of hstacks
-                HStack{                             //hstack with 2 squares
-                    Spacer()
-                    ZStack{
-                        Rectangle()
-                            .fill(.gray)
-                            .frame(width: 150, height: 150)
-                            .cornerRadius(25)
-                        VStack{                         // 10%
-                            Text("10%")
-                                .font(.title)
+                
+                
+                var tenPercentAmt = totalWithoutTip * 1.1
+                var fifteenPercentAmt = totalWithoutTip * 1.15
+                var eighteenPercentAmt = totalWithoutTip * 1.18
+                var twentyPercentAmt = totalWithoutTip * 1.2
+                
+                VStack(alignment: .trailing){           //total w tip + total wo tip hstack
+                    Text("Total without tip: $\(totalWithoutTip, specifier: "%.2f")")
+                        .font(.title)
 
-               //             Text("$\(tenPercentAmt)")
-                        }
+                    Text("Total with tip: $\(totalWithTip, specifier: "%.2f")")
+                        .font(.title)
+                        .fontWeight(.heavy)
 
-                    }
-                    Spacer()
-                    ZStack{
-                        Rectangle()
-                            .fill(.gray)
-                            .frame(width: 150, height: 150)
-                            .cornerRadius(25)
-                        VStack{                         // 15%
-                            Text("15%")
-                                .font(.title)
-                  //          Text("$\(fifteenPercentAmt)")
-                        }
 
-                    }
-                    Spacer()
                 }
-                .padding()
-                HStack{                         //hstack with 2 squares
-                    Spacer()
-                    ZStack{
-                        Rectangle()
-                            .fill(.gray)
-                            .frame(width: 150, height: 150)
-                            .cornerRadius(25)
-                        VStack{                         // 18%
-                            Text("18%")
+                .padding(.bottom)
+                
+                VStack{                                 //vstack with 2 rows of hstacks
+                    HStack{                             //hstack with 2 squares
+                        Spacer()
+                        ZStack{                     //10%
+                            
+                            Button {
+                                totalWithTip = tenPercentAmt
+                                customExtraAmt = 0
+
+                            } label: {
+                                Text("10%")
+                                    .font(.title)
+                                    .padding(.horizontal, 8)
+                                    .foregroundColor(.white)
+                                    .frame(width: 150, height: 150)
+                                    .background(.pink)
+                                    .cornerRadius(25)
+                            }
+                            .buttonStyle(.plain)
+                            Text("$\(tenPercentAmt - totalWithoutTip, specifier: "%.2f")")
+                                .padding(.top, 100.0)
+                        }
+                        
+                        Spacer()
+                        
+                        ZStack{                     //15%
+                            
+                            Button {
+                                totalWithTip = fifteenPercentAmt
+                                customExtraAmt = 0
+
+                            } label: {
+                                Text("15%")
+                                    .font(.title)
+                                    .padding(.horizontal, 8)
+                                    .foregroundColor(.white)
+                                    .frame(width: 150, height: 150)
+                                    .background(.pink)
+                                    .cornerRadius(25)
+                            }
+                            .buttonStyle(.plain)
+                            Text("$\(fifteenPercentAmt - totalWithoutTip, specifier: "%.2f")")
+                                .padding(.top, 100.0)
+                        }
+                        
+                        Spacer()
+                        
+                    }
+                    .padding(.bottom)
+                    
+                    HStack{                         //hstack with 2 squares
+                        Spacer()
+                        ZStack{                     //18%
+                            
+                            Button {
+                                totalWithTip = eighteenPercentAmt
+                                customExtraAmt = 0
+
+                            } label: {
+                                Text("18%")
+                                    .font(.title)
+                                    .padding(.horizontal, 8)
+                                    .foregroundColor(.white)
+                                    .frame(width: 150, height: 150)
+                                    .background(.pink)
+                                    .cornerRadius(25)
+                            }
+                            .buttonStyle(.plain)
+                            Text("$\(eighteenPercentAmt - totalWithoutTip, specifier: "%.2f")")
+                                .padding(.top, 100.0)
+                        }
+                        
+                        Spacer()
+                        ZStack{                     //20%
+                            
+                            Button {
+                                totalWithTip = twentyPercentAmt
+                                customExtraAmt = 0
+
+                            } label: {
+                                Text("20%")
+                                    .font(.title)
+                                    .padding(.horizontal, 8)
+                                    .foregroundColor(.white)
+                                    .frame(width: 150, height: 150)
+                                    .background(.pink)
+                                    .cornerRadius(25)
+                            }
+                            .buttonStyle(.plain)
+                            Text("$\(twentyPercentAmt - totalWithoutTip, specifier: "%.2f")")
+                                .padding(.top, 100.0)
+                        }
+                        Spacer()
+                    }
+                    .padding(.bottom)
+                    
+                    VStack{
+                        HStack{                     //custom %
+                            Spacer()
+                            Text("Custom %")
                                 .font(.title)
-           //                 Text("$\(eighteenPercentAmt)")
+                            TextField("", text: $customPercentnum)
+                                .padding(5)
+                                .frame(width: 50.0)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.gray, lineWidth: 1)
+                                )
+                                .padding(.trailing, 10.0)
+                            
+                            Button("Ok") {
+                                var customPercent = (Double(customPercentnum)! * 0.01)
+                                totalWithTip = (customPercent + 1) * totalWithoutTip
+                                customExtraAmt = totalWithTip - totalWithoutTip
+                            }
+                            .tint(.pink)
+                            .buttonStyle(.borderedProminent)
+                            Spacer()
+                        }
+                        HStack{                     //custom % actual amount
+                            Spacer()
+                            Text("Custom % amount: ")
+                                .font(.headline)
+                            Text("$\(customExtraAmt, specifier: "%.2f")")
+                                .font(.headline)
+                            Spacer()
+
+                            }
+                            .tint(.pink)
+                            .buttonStyle(.borderedProminent)
+                            Spacer()
                         }
                     }
-                    Spacer()
-                    ZStack{
-                        Rectangle()
-                            .fill(.gray)
-                            .frame(width: 150, height: 150)
-                            .cornerRadius(25)
-                        VStack{                         //20%
-                            Text("20%")
-                                .font(.title)
-          //                  Text("$\(twentyPercentAmt)")
-                        }
-                    }
-                    Spacer()
-                      }
-                   }
-               }
+                    .padding()
+                    
+                NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                    Text("Next")
+                }
+                    //end of tipping buttons vstack below
+                }
             }
+
         }
-    
+    }
 
 
 struct TipScreen_Previews: PreviewProvider {
+    @State static var total: Double = 0.0
+    @State static var tax: Double = 0.0
     static var previews: some View {
-        TipScreen()
+        TipScreen(total: $total, tax: $tax)
     }
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDA696492A8D416200323B77 /* totalAndTax.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA696482A8D416200323B77 /* totalAndTax.swift */; };
+		BDA6964B2A8D417200323B77 /* numOfPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA6964A2A8D417200323B77 /* numOfPeople.swift */; };
 		BDB1EDA42A8BFC9400C30651 /* SplitTheBillApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB1EDA32A8BFC9400C30651 /* SplitTheBillApp.swift */; };
 		BDB1EDA62A8BFC9400C30651 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB1EDA52A8BFC9400C30651 /* ContentView.swift */; };
 		BDB1EDA82A8BFC9D00C30651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB1EDA72A8BFC9D00C30651 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BDA696482A8D416200323B77 /* totalAndTax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalAndTax.swift; sourceTree = "<group>"; };
+		BDA6964A2A8D417200323B77 /* numOfPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numOfPeople.swift; sourceTree = "<group>"; };
 		BDB1EDA02A8BFC9400C30651 /* SplitTheBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitTheBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB1EDA32A8BFC9400C30651 /* SplitTheBillApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTheBillApp.swift; sourceTree = "<group>"; };
 		BDB1EDA52A8BFC9400C30651 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 				BDB1EDA32A8BFC9400C30651 /* SplitTheBillApp.swift */,
 				BDB1EDA52A8BFC9400C30651 /* ContentView.swift */,
 				BDFB804F2A8C03A80010D390 /* TipScreen.swift */,
+				BDA696482A8D416200323B77 /* totalAndTax.swift */,
+				BDA6964A2A8D417200323B77 /* numOfPeople.swift */,
 				BDB1EDA72A8BFC9D00C30651 /* Assets.xcassets */,
 				BDB1EDA92A8BFC9D00C30651 /* Preview Content */,
 			);
@@ -140,6 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA696492A8D416200323B77 /* totalAndTax.swift in Sources */,
+				BDA6964B2A8D417200323B77 /* numOfPeople.swift in Sources */,
 				BDB1EDA62A8BFC9400C30651 /* ContentView.swift in Sources */,
 				BDFB80502A8C03A90010D390 /* TipScreen.swift in Sources */,
 				BDB1EDA42A8BFC9400C30651 /* SplitTheBillApp.swift in Sources */,
