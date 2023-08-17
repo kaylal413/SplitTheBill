@@ -10,8 +10,8 @@ import SwiftUI
 struct totalAndTax: View {
     @State var string: String =  ""
     @State var stringg: String =  ""
-    @Binding var total: Double
-    @Binding var tax: Double
+    @State var total: Double
+    @State var tax: Double
     
     
     var body: some View {
@@ -62,19 +62,22 @@ struct totalAndTax: View {
             }
             
             Spacer()
-            NavigationLink(destination: ContentView(total: total, tax: tax)){
+            NavigationLink(destination: numOfPeople()){
                 Text("Next")
             }
             
             
         }
     }
+}
+    
+    
     struct totalAndTax_Previews: PreviewProvider {
-        @State static var total : Double = 0.0
-        @State static var tax: Double = 0.0
+        
         
         static var previews: some View {
-            totalAndTax(total: $total, tax: $tax)
+            totalAndTax(total: 0.0, tax: 0.0)
         }
     }
-}
+
+

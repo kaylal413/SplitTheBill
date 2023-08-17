@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct SplitTheBillApp: App {
+
     var body: some Scene {
         WindowGroup {
-            numOfPeople()
+            HomeScreen()
         }
     }
 }

@@ -27,14 +27,14 @@ struct ContentView: View {
                             .frame(width: 300.0)
                     }
                     .padding(.bottom)
-                    NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                    NavigationLink(destination: SplitByMeal(total: $total, tax: $tax)) {
                         Image("meal")
                             .resizable(resizingMode: .stretch)
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 300.0)
                     }
                     .padding(.bottom)
-                    NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                    NavigationLink(destination: percent(total: $total, tax: $tax)) {
                         Image("percent")
                             .resizable(resizingMode: .stretch)
                             .aspectRatio(contentMode: .fit)

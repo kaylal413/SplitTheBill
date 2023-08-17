@@ -7,16 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD1A6BC12A8E5D1D00916AE6 /* poeplesName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A6BC02A8E5D1D00916AE6 /* poeplesName.swift */; };
+		BD1A6BC32A8E5D8300916AE6 /* SplitByMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A6BC22A8E5D8300916AE6 /* SplitByMeal.swift */; };
+		BD1A6BC52A8E640900916AE6 /* percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A6BC42A8E640900916AE6 /* percent.swift */; };
+		BD1A6BC92A8E7D1E00916AE6 /* TipScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1A6BC82A8E7D1E00916AE6 /* TipScreen2.swift */; };
 		BDA696492A8D416200323B77 /* totalAndTax.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA696482A8D416200323B77 /* totalAndTax.swift */; };
 		BDA6964B2A8D417200323B77 /* numOfPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA6964A2A8D417200323B77 /* numOfPeople.swift */; };
 		BDB1EDA42A8BFC9400C30651 /* SplitTheBillApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB1EDA32A8BFC9400C30651 /* SplitTheBillApp.swift */; };
 		BDB1EDA62A8BFC9400C30651 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB1EDA52A8BFC9400C30651 /* ContentView.swift */; };
 		BDB1EDA82A8BFC9D00C30651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB1EDA72A8BFC9D00C30651 /* Assets.xcassets */; };
 		BDB1EDAB2A8BFC9D00C30651 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB1EDAA2A8BFC9D00C30651 /* Preview Assets.xcassets */; };
+		BDEE9DB92A8E9385002D56AF /* endScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE9DB82A8E9385002D56AF /* endScreen.swift */; };
+		BDEE9DBB2A8E9401002D56AF /* endScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE9DBA2A8E9401002D56AF /* endScreen2.swift */; };
+		BDEE9DBD2A8E9769002D56AF /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE9DBC2A8E9769002D56AF /* HomeScreen.swift */; };
 		BDFB80502A8C03A90010D390 /* TipScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFB804F2A8C03A80010D390 /* TipScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD1A6BC02A8E5D1D00916AE6 /* poeplesName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poeplesName.swift; sourceTree = "<group>"; };
+		BD1A6BC22A8E5D8300916AE6 /* SplitByMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitByMeal.swift; sourceTree = "<group>"; };
+		BD1A6BC42A8E640900916AE6 /* percent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = percent.swift; sourceTree = "<group>"; };
+		BD1A6BC82A8E7D1E00916AE6 /* TipScreen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipScreen2.swift; sourceTree = "<group>"; };
 		BDA696482A8D416200323B77 /* totalAndTax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totalAndTax.swift; sourceTree = "<group>"; };
 		BDA6964A2A8D417200323B77 /* numOfPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numOfPeople.swift; sourceTree = "<group>"; };
 		BDB1EDA02A8BFC9400C30651 /* SplitTheBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitTheBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +35,9 @@
 		BDB1EDA52A8BFC9400C30651 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BDB1EDA72A8BFC9D00C30651 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDB1EDAA2A8BFC9D00C30651 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BDEE9DB82A8E9385002D56AF /* endScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = endScreen.swift; sourceTree = "<group>"; };
+		BDEE9DBA2A8E9401002D56AF /* endScreen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = endScreen2.swift; sourceTree = "<group>"; };
+		BDEE9DBC2A8E9769002D56AF /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		BDFB804F2A8C03A80010D390 /* TipScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,10 +72,17 @@
 			isa = PBXGroup;
 			children = (
 				BDB1EDA32A8BFC9400C30651 /* SplitTheBillApp.swift */,
-				BDB1EDA52A8BFC9400C30651 /* ContentView.swift */,
-				BDFB804F2A8C03A80010D390 /* TipScreen.swift */,
+				BDEE9DBC2A8E9769002D56AF /* HomeScreen.swift */,
 				BDA696482A8D416200323B77 /* totalAndTax.swift */,
 				BDA6964A2A8D417200323B77 /* numOfPeople.swift */,
+				BD1A6BC02A8E5D1D00916AE6 /* poeplesName.swift */,
+				BDB1EDA52A8BFC9400C30651 /* ContentView.swift */,
+				BD1A6BC42A8E640900916AE6 /* percent.swift */,
+				BD1A6BC22A8E5D8300916AE6 /* SplitByMeal.swift */,
+				BD1A6BC82A8E7D1E00916AE6 /* TipScreen2.swift */,
+				BDEE9DB82A8E9385002D56AF /* endScreen.swift */,
+				BDEE9DBA2A8E9401002D56AF /* endScreen2.swift */,
+				BDFB804F2A8C03A80010D390 /* TipScreen.swift */,
 				BDB1EDA72A8BFC9D00C30651 /* Assets.xcassets */,
 				BDB1EDA92A8BFC9D00C30651 /* Preview Content */,
 			);
@@ -146,11 +167,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1A6BC12A8E5D1D00916AE6 /* poeplesName.swift in Sources */,
 				BDA696492A8D416200323B77 /* totalAndTax.swift in Sources */,
+				BD1A6BC32A8E5D8300916AE6 /* SplitByMeal.swift in Sources */,
 				BDA6964B2A8D417200323B77 /* numOfPeople.swift in Sources */,
+				BDEE9DB92A8E9385002D56AF /* endScreen.swift in Sources */,
 				BDB1EDA62A8BFC9400C30651 /* ContentView.swift in Sources */,
 				BDFB80502A8C03A90010D390 /* TipScreen.swift in Sources */,
+				BDEE9DBB2A8E9401002D56AF /* endScreen2.swift in Sources */,
+				BDEE9DBD2A8E9769002D56AF /* HomeScreen.swift in Sources */,
+				BD1A6BC52A8E640900916AE6 /* percent.swift in Sources */,
 				BDB1EDA42A8BFC9400C30651 /* SplitTheBillApp.swift in Sources */,
+				BD1A6BC92A8E7D1E00916AE6 /* TipScreen2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

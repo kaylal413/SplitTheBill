@@ -1,6 +1,13 @@
+//
+//  TipScreen2.swift
+//  SplitTheBill
+//
+//  Created by scholar on 8/17/23.
+//
+
 import SwiftUI
 
-struct TipScreen: View {
+struct TipScreen2: View {
 
     @Binding var total: Double
     @Binding var tax: Double
@@ -19,8 +26,8 @@ struct TipScreen: View {
             VStack{                                             //really big vstack
                 HStack{                                   //tip + icon hstack
                     Text("Tip")
-                        .font(.largeTitle)
-                        .fontWeight(.black)
+                        .fontWeight(.bold)
+                        .font(.title)
                     Image("tipicon")
                         .resizable(resizingMode: .stretch)
                         .aspectRatio(contentMode: .fit)
@@ -180,7 +187,7 @@ struct TipScreen: View {
                     }
                     .padding()
                     
-                NavigationLink(destination: endScreen(total: $total, tax: $tax)) {
+                NavigationLink(destination: endScreen2(total: $total, tax: $tax)) {
                     Text("Next")
                 }
                     //end of tipping buttons vstack below
@@ -191,11 +198,10 @@ struct TipScreen: View {
     }
 
 
-struct TipScreen_Previews: PreviewProvider {
+struct TipScreen2_Previews: PreviewProvider {
     @State static var total: Double = 0.0
     @State static var tax: Double = 0.0
     static var previews: some View {
-        TipScreen(total: $total, tax: $tax)
+        TipScreen2(total: $total, tax: $tax)
     }
 }
-
